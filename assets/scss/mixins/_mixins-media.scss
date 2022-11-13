@@ -1,5 +1,3 @@
-@use "../presets" as *;
-
 $diff: 0.2px;
 
 /* ul */
@@ -251,6 +249,25 @@ $diff: 0.2px;
 
 @mixin xx {
   @media (max-width: ($xx - $diff)) {
+    @content;
+  }
+}
+
+@mixin xx-ux {
+  @media (max-width: ($xx - $diff)) and (min-width: $ux) {
+    @content;
+  }
+}
+
+/* ux */
+@mixin ux-min {
+  @media (min-width: $ux) {
+    @content;
+  }
+}
+
+@mixin ux {
+  @media (max-width: ($ux - $diff)) {
     @content;
   }
 }
