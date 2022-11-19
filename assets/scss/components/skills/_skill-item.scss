@@ -5,8 +5,9 @@
   position: relative;
 
   &__title {
-    margin: 0;
     z-index: 1;
+
+    margin: 0;
 
     letter-spacing: 0.1em;
 
@@ -23,8 +24,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: $gap;
+
     height: 100%;
+    padding: $gap;
   }
 
   &__image {
@@ -38,6 +40,7 @@
   &__overlay {
     opacity: 0.8;
     background-color: $color-primary;
+
     @include abs-position;
   }
 }
